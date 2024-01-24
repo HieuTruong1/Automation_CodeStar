@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <move file="E:\Java\Test_OOP\Auto_test\target/Auto_test-apexconf.jar" tofile="E:\Java\Test_OOP\Auto_test\target/Auto_test.apc"/>
+</target>
+</project>
