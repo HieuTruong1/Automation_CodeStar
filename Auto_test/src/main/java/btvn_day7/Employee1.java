@@ -3,15 +3,15 @@ import java.util.Scanner;
 
 import java.util.ArrayList;
 
-public class Employee {
+public class Employee1 {
 	public int id;
 	public String name;
-	ArrayList<Employee> ls = new ArrayList<>();
+	ArrayList<Employee1> ls = new ArrayList<>();
 	
-	public Employee() {
+	public Employee1() {
 	}
 	
-	public Employee(int id, String name) {
+	public Employee1(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -36,12 +36,12 @@ public class Employee {
 		
 		do {
 			input();
-			ls.add(new Employee(id, name));
+			ls.add(new Employee1(id, name));
 		} while (ls.size() < key);
 	}
 	
 	public void outputList() {
-		for(Employee e : ls) {
+		for(Employee1 e : ls) {
 			System.out.println("Employee #"+ (ls.indexOf(e)+1)+ " : ID "+e.id+" - Name: "+e.name);
 		}
 	}
