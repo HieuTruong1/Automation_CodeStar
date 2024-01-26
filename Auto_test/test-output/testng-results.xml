@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-25T21:16:31 ICT" name="Default suite" finished-at="2024-01-25T21:16:37 ICT" duration-ms="6064">
+    <groups>
+    </groups>
+    <test started-at="2024-01-25T21:16:31 ICT" name="Default test" finished-at="2024-01-25T21:16:37 ICT" duration-ms="6064">
+      <class name="auto.testsuit.Day7_autoSuite">
+        <test-method is-config="true" signature="openChrome()[pri:0, instance:auto.testsuit.Day7_autoSuite@37d4349f]" started-at="2024-01-25T21:16:31 ICT" name="openChrome" finished-at="2024-01-25T21:16:37 ICT" duration-ms="5931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openChrome -->
+        <test-method signature="opeWebBepAnToan()[pri:0, instance:auto.testsuit.Day7_autoSuite@37d4349f]" started-at="2024-01-25T21:16:37 ICT" name="opeWebBepAnToan" finished-at="2024-01-25T21:16:37 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeWebBepAnToan -->
+        <test-method is-config="true" signature="closeCrhome()[pri:0, instance:auto.testsuit.Day7_autoSuite@37d4349f]" started-at="2024-01-25T21:16:37 ICT" name="closeCrhome" finished-at="2024-01-25T21:16:37 ICT" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeCrhome -->
+      </class> <!-- auto.testsuit.Day7_autoSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
