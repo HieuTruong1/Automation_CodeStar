@@ -1,5 +1,7 @@
 package auto.testsuit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +24,13 @@ public class Day7_autoSuite extends CommonBase {
 	}
 	
 	@Test
-	public void opeWebBepAnToan() {
-		System.out.println("Test1");
+	public void opeWebBepAnToan() throws InterruptedException {
+		Thread.sleep(2500);
+		WebElement beptu = driver.findElement(By.linkText("Bếp Từ"));
+		System.out.println("Link Bep Tu: "+beptu);
+		
+		WebElement mayhutmui = driver.findElement(By.partialLinkText("Hút Mùi"));
+		System.out.println("Link May Hut Mui: "+mayhutmui);
+		
 	}
 }
