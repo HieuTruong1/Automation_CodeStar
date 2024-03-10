@@ -16,13 +16,13 @@ public class Login extends PF_VARIABLES {
 		PageFactory.initElements(_driver, this);
 	}
 	public void LoginFunction(String email, String pass) throws InterruptedException {
-		b13Email.clear();
-		b13Email.sendKeys(email);
+		riseEmail.clear();
+		riseEmail.sendKeys(email);
 		
-		b13Pass.clear();
-		b13Pass.sendKeys(pass);
+		risePass.clear();
+		risePass.sendKeys(pass);
 		
-		b13Submit.click();
+		riseSubmit.click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
@@ -41,7 +41,7 @@ public class Login extends PF_VARIABLES {
 		rPass.sendKeys(pass);
 		rNewPass.sendKeys(newPass);
 		rReNewPass.sendKeys(newPass);
-		btnSave.click();
+		btnSavePass.click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	

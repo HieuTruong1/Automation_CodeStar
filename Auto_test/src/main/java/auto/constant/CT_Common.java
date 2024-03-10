@@ -8,4 +8,5 @@ public class CT_Common {
 	public static String URLDrop = "http://demo.seleniumeasy.com/basic-select-dropdown-demo.html";
 	
 	public static String URLRise = "https://rise.fairsketch.com/signin";
+	public static String URLTrizen = "https://techydevs.com/demos/themes/html/trizen-demo/trizen/index.html";
 }

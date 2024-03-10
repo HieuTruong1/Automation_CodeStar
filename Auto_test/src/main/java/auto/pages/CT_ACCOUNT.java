@@ -9,4 +9,9 @@ public class CT_ACCOUNT {
 	public static By BTN_SIGNIN = By.xpath("//button[text()='Sign in']") ;
 	public static By BTN_USER = By.xpath("//a[@id='user-dropdown']");
 	public static By BTN_SIGNOUT = By.xpath("//a[normalize-space() = 'Sign Out']");
+	
+	
+	//day15Trizen
+	
+	public static By DATE_DEPARTDING = By.xpath("//div[@id='one-way']//descendant::label[text() = 'Departing']/following-sibling::div/input");
 }
