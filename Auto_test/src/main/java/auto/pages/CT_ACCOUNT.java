@@ -14,4 +14,12 @@ public class CT_ACCOUNT {
 	//day15Trizen
 	
 	public static By DATE_DEPARTDING = By.xpath("//div[@id='one-way']//descendant::label[text() = 'Departing']/following-sibling::div/input");
+	
+	//Alada
+	public static By ALADA_TXT_LOGIN = By.xpath("//p[text() = 'Đăng nhập ']");
+	public static By ALADA_TXT_INFO = By.xpath("//a[text() = 'Thông tin chung']");
+	
+	//AlertDemo
+	public static By ALERT_DEMO_TITLE = By.xpath("//h1[@class = 'title']/child::a");
+	public static By BTN_TRY = By.xpath("//button [text() = 'Try it']");
 }
