@@ -10,4 +10,7 @@ public class CT_Common {
 	public static String URLTrizen = "https://techydevs.com/demos/themes/html/trizen-demo/trizen/index.html";
 	public static String URLAlert = "https://demo.automationtesting.in/Alerts.html";
 	public static String URLAlertDemo = "http://seleniumpractise.blogspot.com/2019/01/alert-demo.html";
+	public static String URL_GURU = "https://demo.guru99.com/popup.php";
+	public static String URL_DIENMAY = "https://dienmaynhapkhaugiare.com.vn";
+	public static String URL_MEDIAMART = "https://mediamart.vn";
 }

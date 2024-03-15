@@ -22,4 +22,14 @@ public class CT_ACCOUNT {
 	//AlertDemo
 	public static By ALERT_DEMO_TITLE = By.xpath("//h1[@class = 'title']/child::a");
 	public static By BTN_TRY = By.xpath("//button [text() = 'Try it']");
+	
+	//DienMay
+	public static By messengerBuble = By.xpath("//iframe[@data-testid = 'dialog_iframe']");
+	public static By BTN_MESSENGER_LOGIN = By.xpath("//span[text() = 'Bắt đầu chat']/parent::div");
+	public static By TXT_DANGNHAP = By.xpath("//div[text() = 'Đăng nhập']");
+	
+	//MediaMart
+	public static By BTN_ZALO = By.xpath("//div[@id = 'chat-plugins']//iframe");
+	public static By BTN_CHAT_NHANH = By.xpath("//div[text() = 'Chat nhanh']");
+	public static By TXT_VERIFYED1 = By.xpath("//h3[text() = 'Rất vui khi được hỗ trợ bạn']");
 }
