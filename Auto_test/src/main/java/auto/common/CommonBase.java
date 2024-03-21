@@ -1,6 +1,7 @@
 package auto.common;
 
 import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
@@ -12,6 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,12 +25,49 @@ public class CommonBase {
 	public int initwaitTime = 40;
 	
 	
-	public WebDriver initChromeDriver( String url) throws InterruptedException {
+	public WebDriver initChromeDriver() throws InterruptedException {
+		System.out.println("Chrome is launching.....");
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get(url);
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().pageLoadTimeout(4,TimeUnit.SECONDS);
+		return driver;
+	}
+	
+	public WebDriver initEdgeDriver() throws InterruptedException {
+		System.out.println("Edge is launching.....");
+		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		//driver.manage().timeouts().pageLoadTimeout(4,TimeUnit.SECONDS);
+		return driver;
+	}
+	
+	public WebDriver initFireFoxDriver() throws InterruptedException {
+		System.out.println("Firefox  is launching.....");
+		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		//driver.manage().timeouts().pageLoadTimeout(4,TimeUnit.SECONDS);
+		return driver;
+	}
+	
+	public WebDriver setupDriver (String browserName) throws InterruptedException {
+		switch (browserName.trim().toLowerCase()) {
+		case "chrome":
+			driver = initChromeDriver();
+			break;
+		case "edge":
+			driver = initEdgeDriver();
+			break;
+		case "firefox":
+			driver = initFireFoxDriver();
+			break;
+		default:
+			System.out.println("Invalid browser name >>>> Starting Chrome .......");
+			driver =initChromeDriver();
+			break;
+		}
 		return driver;
 	}
 	
@@ -53,5 +93,26 @@ public class CommonBase {
 	
 	public void inputText(WebElement element , String text) {
 		element.sendKeys(text);
+	}
+	
+	public void clickElement(By locator) {
+		WebElement e = getElementInDOM(locator);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(e));
+		e.click();
+	}
+	
+	public void changeToPopupWindow () {
+		 //find main window 
+		String mainWindow = driver.getWindowHandle();
+		//get list of popup window after clicked the button
+		Set<String> popupWins = driver.getWindowHandles();
+		
+		//find the popup window and switch to it 
+		for (String window : popupWins) {
+			if (!window.equals(mainWindow)) {
+				driver.switchTo().window(window);
+			}
+		}
 	}
 }

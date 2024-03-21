@@ -27,9 +27,15 @@ public class CT_ACCOUNT {
 	public static By messengerBuble = By.xpath("//iframe[@data-testid = 'dialog_iframe']");
 	public static By BTN_MESSENGER_LOGIN = By.xpath("//span[text() = 'Bắt đầu chat']/parent::div");
 	public static By TXT_DANGNHAP = By.xpath("//div[text() = 'Đăng nhập']");
+	public static By BTN_ZALOCHAT = By.xpath("//div[@id = 'zalo-vr']//descendant::div[@class = 'phone-vr-img-circle']");
+	public static By TXT_CHECK_POPUP = By.xpath("//div[text() = 'Chuyên PP điện tử điện lạnh chính hãng : 0988169282']");
 	
 	//MediaMart
 	public static By BTN_ZALO = By.xpath("//div[@id = 'chat-plugins']//iframe");
 	public static By BTN_CHAT_NHANH = By.xpath("//div[text() = 'Chat nhanh']");
 	public static By TXT_VERIFYED1 = By.xpath("//h3[text() = 'Rất vui khi được hỗ trợ bạn']");
+	
+	//Bep an toan
+	public static By BTNCHATNGAY =	By.xpath("//span[text() = 'Chat với chúng tôi']/ancestor::a");
+	public static By TXT_CHECK_CHATNGAY = By.xpath("//h2[text() = 'Giới thiệu bản thân']");
 }

@@ -8,21 +8,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import auto.common.CommonBase;
 import auto.constant.CT_Common;
-import auto.pages.AlertDemoFunctions;
 import auto.pages.CT_ACCOUNT;
 
-public class Day16_BTVN_2 extends CommonBase{
+public class Day18_MultyBrowser extends CommonBase{
 	@BeforeMethod
-	public void initChrome() throws InterruptedException {
-		initFireFoxDriver(CT_Common.URLAlertDemo);
+	@Parameters ("browserName")
+	public void initBrowser(@Optional("firefox") String browserValue) throws InterruptedException { //chrome //edge //firefox
+		setupDriver(browserValue);
+		driver.get(CT_Common.URLAlertDemo);
 	}
 	
 	@AfterMethod
-	public void closeChrome() {
+	public void closeBrowser() {
 		driver.close();
 	}
 	

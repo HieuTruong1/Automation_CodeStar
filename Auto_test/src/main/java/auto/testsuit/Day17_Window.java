@@ -15,16 +15,8 @@ import org.testng.annotations.Test;
 import auto.common.CommonBase;
 import auto.constant.CT_Common;
 
-public class Day17_practise extends CommonBase {
-	@BeforeMethod
-	public void initChrome() throws InterruptedException {
-		initChromeDriver(CT_Common.URL_GURU);
-	}
-	
-	@AfterMethod
-	public void closeChrome() {
-		driver.close();
-	}
+public class Day17_Window extends CommonBase {
+	 
 	
 	@Test
 	public void popupWindow() {
